@@ -7,3 +7,4 @@ start:
 test:
 	# cd tst && ../vendor/bin/phpunit
 	./vendor/bin/phpunit tst
+
