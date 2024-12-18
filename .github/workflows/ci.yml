@@ -28,4 +28,4 @@ jobs:
         php composer.phar install
 
     - name: Run PHPUnit tests
-      run: ./vendor/bin/phpunit --coverage-text
+      run: ./vendor/bin/phpunit
