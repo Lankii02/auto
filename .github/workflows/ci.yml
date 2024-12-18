@@ -27,12 +27,5 @@ jobs:
         curl -sS https://getcomposer.org/installer | php
         php composer.phar install
 
-    - name: Run PHPUnit tests with coverage (text and Cobertura)
-      run: |
-        ./vendor/bin/phpunit --coverage-text --coverage-xml ./coverage.xml
-
-    - name: Generate Code Coverage Summary
-      uses: irongut/CodeCoverageSummary@v2
-      with:
-        format: cobertura
-        coverage-file: ./coverage.xml
+    - name: Run PHPUnit tests
+      run: ./vendor/bin/phpunit
