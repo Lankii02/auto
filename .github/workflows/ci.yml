@@ -34,3 +34,12 @@ jobs:
       uses: irongut/CodeCoverageSummary@v1.3.0
       with:
         filename: log/coverage-cobertura.xml
+
+    - name: Run PHPCS (PHP Code Sniffer)
+      run: ./vendor/bin/phpcs --standard=PSR12 ./lib
+
+    - name: Run PHPMD (PHP Mess Detector)
+      run: ./vendor/bin/phpmd ./lib text cleancode
+
+    - name: Run PHPStan (PHP Static Analysis)
+      run: ./vendor/bin/phpstan analyse --level=5 ./lib
