@@ -36,7 +36,7 @@ jobs:
         filename: log/coverage-cobertura.xml
 
     - name: Run PHPCS (PHP Code Sniffer)
-      run: ./vendor/bin/phpcs --standard=PSR12 ./lib
+      run: ./vendor/bin/phpcs ./lib
 
     - name: Run PHPMD (PHP Mess Detector)
       run: ./vendor/bin/phpmd ./lib text cleancode
